@@ -2,7 +2,7 @@ package ru.hse.bank.dao
 
 import ru.hse.bank.entity.AccountEntity
 
-class RuntimeAccountDAO : AccountDAO {
+class RuntimeAccountDao : AccountDao {
     private val accountEntities = mutableListOf<AccountEntity>()
 
     override fun findAccountByName(name: String): AccountEntity =

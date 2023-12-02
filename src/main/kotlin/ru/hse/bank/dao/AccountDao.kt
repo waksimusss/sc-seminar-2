@@ -2,7 +2,7 @@ package ru.hse.bank.dao
 
 import ru.hse.bank.entity.AccountEntity
 
-interface AccountDAO {
+interface AccountDao {
 
     fun findAccountByName(name: String): AccountEntity
 

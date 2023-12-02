@@ -1,19 +1,12 @@
 package ru.hse.bank
 
-data class Person(
-    val name: String,
-    var age: Int? = null
-)
+import ru.hse.bank.dao.FileSystemAccountDao
+import ru.hse.bank.entity.AccountEntity
 
 fun main() {
 
-    val alice = Person(name = "Alice", age = 20)
-    val bob = Person("bob", 22)
-    val error = Person("error")
+    var accountDao = FileSystemAccountDao()
+    val alice = AccountEntity(name = "Alice", sum = 200)
 
-    val persons = arrayOf(alice, bob, error)
-
-    bob.age?.let { println() }
-
-    persons.maxBy { it.age ?: 0 }
+    accountDao.saveAccount(alice)
 }
